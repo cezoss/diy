@@ -248,7 +248,7 @@ var o=j;
 j=j.replace('https://','').replace('http://','').replace('.be/','be/').replace('.in/','/').replace('.jp/','/').replace('.tv/','/').replace('.com/','/').split('&')[0].split('#')[0].replace('player.twitch/?channel=','twitch');
 var i=j.split('/')[0].split('.');i=i[1]||i[0];
 if('youtube'===i){
-i=j.replace('watch?v=','').replace('embed/','').split('/')[1].split('?')[0];
+i=j.replace('watch?v=','').replace('live_chat?v=','').split('/')[1].split('?')[0];
 j=k===4?[i,'']:[i,'http://www.youtube.com/live_chat?v='+i+'&autoplay=true&wmode=opaque&embed_domain=cezoss.github.io'];
 }else if('hitbox'===i){
 i=j.replace('embedchat/','').replace('embed/','').split('/')[1].split('?')[0];
