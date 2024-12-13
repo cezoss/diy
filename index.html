@@ -249,8 +249,8 @@ var o=j;
 j=j.replace('https://','').replace('http://','').replace('.be/','be/').replace('.in/','/').replace('.jp/','/').replace('.tv/','/').replace('.com/','/').split('&')[0].split('#')[0].replace('player.twitch/?channel=','twitch');
 var i=j.split('/')[0].split('.');i=i[1]||i[0];
 if('youtube'===i){
-i=j.replace('watch?v=','').replace('embed/','').split('/')[1].split('?')[0];
-j=k===4?[i,'']:[i,'https://www.youtube.com/embed/'+i+'&autoplay=true&wmode=opaque&embed_domain=cezoss.github.io'];
+i=j.replace('watch?v=','').replace('live_chat?v=','').split('/')[1].split('?')[0];
+j=k===4?[i,'']:[i,'https://www.youtube.com/live_chat?v='+i+'&autoplay=true&wmode=opaque&embed_domain=cezoss.github.io'];
 }else if('hitbox'===i){
 i=j.replace('embedchat/','').replace('embed/','').split('/')[1].split('?')[0];
 j=k===4?[i,'http://www.hitbox.tv/embedchat/'+i+'?autoconnect=true']:[i,'http://www.hitbox.tv/embed/'+i+'?autoplay=true&wmode=opaque'];
@@ -275,9 +275,6 @@ j=k===4?[i,'https://www.twitch.tv/embed/'+i+'/chat?darkpopout&parent=cezoss.gith
 }else if('streamup'===i){
 i=j.replace('rooms/','').replace('plugins/video/show','').split('/')[1].split('?')[0];
 j=k==4?[i,'']:[i,'http://streamup.com/rooms/'+i+'/plugins/video/show?autoplayAudio=true&wmode=opaque'];
-}else if('youtube'===i){
-i=j.replace('watch?v=','').replace('embed/','').split('/')[1].split('?')[0];
-j=k===4?[i,'']:[i,'https://www.youtube.com/embed/'+i+'&autoplay=true&wmode=opaque&embed_domain=cezoss.github.io'];
 }else if('livehouse'===i){
 i=j.replace('embed/','').replace('channel/','').split('/')[1].split('?')[0];
 j=k==4?[i,'']:[i,'http://livehouse.in/embed/channel/'+i+'?'];
