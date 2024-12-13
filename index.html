@@ -275,6 +275,9 @@ j=k===4?[i,'https://www.twitch.tv/embed/'+i+'/chat?darkpopout&parent=cezoss.gith
 }else if('streamup'===i){
 i=j.replace('rooms/','').replace('plugins/video/show','').split('/')[1].split('?')[0];
 j=k==4?[i,'']:[i,'http://streamup.com/rooms/'+i+'/plugins/video/show?autoplayAudio=true&wmode=opaque'];
+}else if('youtube'===i){
+i=j.replace('watch?v=','').replace('embed/','').split('/')[1].split('?')[0];
+j=k===4?[i,'']:[i,'https://www.youtube.com/embed/'+i+'&autoplay=true&wmode=opaque&embed_domain=cezoss.github.io'];
 }else if('livehouse'===i){
 i=j.replace('embed/','').replace('channel/','').split('/')[1].split('?')[0];
 j=k==4?[i,'']:[i,'http://livehouse.in/embed/channel/'+i+'?'];
