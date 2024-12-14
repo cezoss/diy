@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>DIY</title><script type="text/javascript" src="https://embed.twitch.tv/embed/v1.js" charset="UTF-8"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"/><style type="text/css">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>DIY</title><script type="text/javascript" src="https://embed.twitch.tv/embed/v1.js" charset="UTF-8"></script><script src="https://www.youtube.com/iframe_api"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"/><style type="text/css">
 body,ul,li,span,div,input,iframe{margin:0px;padding:0px;}
 body,input{font-family:"Courier New","Courier New";font-size:12px;}
 li{list-style:none;}
@@ -250,7 +250,7 @@ j=j.replace('https://','').replace('http://','').replace('.be/','be/').replace('
 var i=j.split('/')[0].split('.');i=i[1]||i[0];
 if('youtube'===i){
 i=j.replace('embed/','').replace('watch?v=','').split('/')[1].split('?')[0];
-j=k===4?[i,'https://www.youtube.com/live_chat?v='+i+'&embed_domain=cezoss.github.io']:[i,'https://www.youtube.com/embed/'+i+'&autoplay=1'];
+j=k===4?[i,'https://www.youtube.com/live_chat?v='+i+'&embed_domain=cezoss.github.io']:[i,'https://www.youtube.com/embed/'+i+'?enablejsapi=1&autoplay=1'];
 }else if('hitbox'===i){
 i=j.replace('embedchat/','').replace('embed/','').split('/')[1].split('?')[0];
 j=k===4?[i,'http://www.hitbox.tv/embedchat/'+i+'?autoconnect=true']:[i,'http://www.hitbox.tv/embed/'+i+'?autoplay=true&wmode=opaque'];
