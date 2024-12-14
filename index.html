@@ -249,8 +249,8 @@ var o=j;
 j=j.replace('https://','').replace('http://','').replace('.be/','be/').replace('.in/','/').replace('.jp/','/').replace('.tv/','/').replace('.com/','/').split('&')[0].split('#')[0].replace('player.twitch/?channel=','twitch');
 var i=j.split('/')[0].split('.');i=i[1]||i[0];
 if('youtube'===i){
-i=j.replace('live_chat?v=','').replace('watch?v=','').split('/')[1].split('?')[0];
-j=k===4?[i,'https://www.youtube.com/live_chat?v='+i+'&embed_domain=cezoss.github.io']:[i,'https://www.youtube.com/embed/'+i+'&autoplay=1&wmode=opaque&embed_domain=cezoss.github.io'];
+i=j.replace('embed/','').replace('watch?v=','').split('/')[1].split('?')[0];
+j=k===4?[i,'https://www.youtube.com/live_chat?v='+i+'&embed_domain=cezoss.github.io']:[i,'https://www.youtube.com/embed/'+i+'&autoplay=1&embed_domain=cezoss.github.io'];
 }else if('hitbox'===i){
 i=j.replace('embedchat/','').replace('embed/','').split('/')[1].split('?')[0];
 j=k===4?[i,'http://www.hitbox.tv/embedchat/'+i+'?autoconnect=true']:[i,'http://www.hitbox.tv/embed/'+i+'?autoplay=true&wmode=opaque'];
